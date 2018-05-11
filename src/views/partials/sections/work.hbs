@@ -1,0 +1,53 @@
+{{#if resume.work.length}}
+    <section class="section-work">
+        {{> components/title icon='briefcase' title='Experience'}}
+
+        {{#each resume.work}}
+            <div class="card">
+                {{#if startDate}}
+                    <div class="card-header">
+                        <span class="card-text card-dates">
+                            {{formatDate startDate}} - {{#if endDate}}{{formatDate endDate}} ({{dateDiff startDate endDate}}){{/if}}
+                        </span>
+                        {{#unless endDate}}
+                            <span class="badge badge-success">current</span>
+                        {{/unless}}
+                    </div>
+                {{/if}}
+
+                {{#if position}}
+                    <div class="card-block">
+                        <h3 class="card-title">
+                            {{position}}
+                            {{#if company}}
+                                <span class="card-subtitle">{{company}}</span>
+                            {{/if}}
+                        </h3>
+                        {{#if summary}}
+                            <div class="card-text">{{{summary}}}</div>
+                        {{/if}}
+                    </div>
+                {{/if}}
+                {{#or highlights.length website}}
+                    <div class="card-footer text-muted">
+                        {{#if highlights.length}}
+                        <ul class="card-highlights">
+                            {{#each highlights}}
+                            <li class="tag text-secondary">
+                                {{this}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                        {{/if}}
+                        {{#if website.length}}
+                        <a class="card-link icon-item text-secondary" href="{{website}}">
+                            <i class="fas fa-link"></i>
+                            <span>{{website}}</span>
+                        </a>
+                        {{/if}}
+                    </div>
+                {{/or}}
+            </div>
+        {{/each}}
+    </section>
+{{/if}}
