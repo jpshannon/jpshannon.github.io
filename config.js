@@ -1,6 +1,6 @@
 const path = require('path');
 
-const outDir = 'docs';
+const outDir = 'public';
 const srcDir = 'src';
 const nodeModulesDir = 'node_modules'
 

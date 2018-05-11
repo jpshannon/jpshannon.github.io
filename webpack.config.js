@@ -64,7 +64,8 @@ module.exports = ({ production, server, coverage } = {}) => ({
 		// })),
 		new HtmlWebPackPlugin({
 			template: config.resume.template,
-			filename: 'index.html',
+			filename: production ? '../index.html' : 'index.html',
+
 			resume: require(config.path.resume),
 			resumeConfig: config.resume
 		})
