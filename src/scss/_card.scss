@@ -9,9 +9,11 @@
 }
 
 .card-header {
-  padding: 0 $spacer 0;
+  padding: $spacer $spacer 0;
   font-size: $font-size-h5;
   line-height: 1;
+  float: right;
+  width: 30%;
 
   .card-dates {
     color: $page-secondary;
@@ -108,6 +110,11 @@
   .card-highlights {
     padding: 0;
     margin: 0;
+  }
+
+  ul.card-highlights {
+    list-style: disc;
+    margin: .25rem 0 0 1rem ;
   }
 
   .card-tags {
