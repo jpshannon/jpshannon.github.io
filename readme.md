@@ -21,3 +21,8 @@ JSONResume.org theme(-ish) based of https://github.com/nass600/jsonresume-theme-
 ```sh
 > npm start -- webpack.build.development.serve
 ```
+
+## TODOS
+
+* Convert to React
+* Implement build for PDF
