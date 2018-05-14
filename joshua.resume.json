@@ -42,8 +42,8 @@
 			"summary": "",
 			"highlights": [
 				"Development of an API to generate REST APIs from data sources such as CSV files, Web APIs and SQL servers",
-				"Backend development of V1 and V2 of Gov2Go Mobile Application",
-				"Architected and developed system extension for processing Trademark filings for Arkansas Secretary of State's Business and Commercial Services"
+				"Backend development of V1 and V2 of Gov2Go Mobile Application using PHP and REST",
+				"Architect and development of a system extension for processing Trademark filings for Arkansas Secretary of State's Business and Commercial Services using ASP.NET WebForms"
 			]
 		},
 		{
@@ -60,8 +60,8 @@
 			"company": "Flex360",
 			"position": "Web Developer",
 			"website": "https://www.flex360.com/",
-			"startDate": "2011-03-01",
-			"endDate": "2013-01-01",
+			"startDate": "2010-03-01",
+			"endDate": "2011-01-01",
 			"summary": "Development of Client websites utilizing PHP, CSS and Javascript.",
 			"highlights": [
 			]
@@ -71,11 +71,11 @@
 			"position": "Programming Team Leader",
 			"website": "https://www.aristotleinteractive.com/",
 			"startDate": "2004-01-01",
-			"endDate": "2011-03-01",
-			"summary": "Magage and team of 3 developer and cooridinate projects with a team of 3 Producers.",
+			"endDate": "2010-03-01",
+			"summary": "Manage a team of 3 Developers and coordinate projects with a team of 3 Producers while also implementing new product features.",
 			"highlights": [
-				"Designed ASP.NET Content Management System used as starting point for Client websites",
-				"Built tools and libraries to improve code reuse in the development staff"
+				"Architect and Development of an ASP.NET Content Management System used as starting point for Client websites",
+				"Development of tools and libraries to improve code reuse among the development staff"
 			]
 		}
 
@@ -86,8 +86,7 @@
 			"position": "League Representative",
 			"website": "https://lrkickball.com/",
 			"startDate": "2012-01-01",
-			"endDate": null,
-			"summary": "Work with other representatives to manage LRKA under Larry Betz (Poo)",
+			"summary": "Work with other representatives to manage the LRKA under Larry Betz (Poo)",
 			"highlights": [
 			]
 		}
@@ -99,7 +98,6 @@
 			"studyType": "Bachelor",
 			"startDate": "1997-09-01",
 			"endDate": "2002-05-01",
-			"gpa": "3.5",
 			"courses": [
 			]
 		}
@@ -119,6 +117,7 @@
 			"name": "Backend",
 			"keywords": [
 				".NET",
+				"REST",
 				"PHP",
 				"Node",
 				"MSSQL",
