@@ -5,7 +5,7 @@
             {{#if resume.basics.email}}
                 <li class="icon-item clearfix">
                     <i class="fas fa-envelope"></i>
-                    <span class="text-secondary">{{resume.basics.email}}</span>
+                    <a class="text-secondary" href="mailto:{{{obfuscate resume.basics.email}}}">{{{obfuscate resume.basics.email}}}</a>
                 </li>
             {{/if}}
             {{#if resume.basics.phone}}
