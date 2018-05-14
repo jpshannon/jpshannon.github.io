@@ -14,17 +14,25 @@
   line-height: 1;
   float: right;
   width: 30%;
+  text-align: right;
 
   .sidebar & {
     padding: $spacer/2 0 0;
-    margin-right: -$spacer;
-    width: 33%;
+    margin-right: -$spacer/2;
+    width: auto;
   }
 
   .card-dates {
     color: $page-secondary;
     display: inline-block;
+    text-align: right;
 
+    .date-span {
+      display: block;
+      .sidebar & {
+        display: none;
+      }
+    }
 
   }
 
@@ -55,6 +63,9 @@
     color: $page-secondary;
     display: block;
     font-size: $font-size-h5;
+    a {
+      text-transform: lowercase;
+    }
   }
 
   .card-text {
@@ -79,8 +90,6 @@
     }
   }
 }
-
-.sidebar .date-span { display: none; }
 
 .card-footer {
   padding: 0 $spacer 0;

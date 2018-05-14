@@ -21,6 +21,12 @@ module.exports = {
 	},
 	resume: {
 		template: path.join(srcDir, 'views', 'resume.hbs'),
-		format: 'a4'
+		options: {
+			url: path.resolve(__dirname, 'index.html'),
+			path: path.resolve(__dirname),
+			format: 'a4',
+			filename: 'resume.pdf'
+		}
+
 	}
 }

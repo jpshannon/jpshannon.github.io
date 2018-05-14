@@ -7,7 +7,7 @@
                 {{#if startDate}}
                     <div class="card-header">
                         <span class="card-text card-dates">
-                            {{formatDate startDate}} - {{#if endDate}}{{formatDate endDate}} ({{dateDiff startDate endDate}}){{/if}}
+                            {{formatDate startDate}} - {{#if endDate}}{{formatDate endDate}} <span class="date-span">({{dateDiff startDate endDate}}){{/if}}</span>
                         </span>
                         {{#unless endDate}}
                             <span class="badge badge-outline-secondary">current</span>
@@ -19,9 +19,15 @@
                     <div class="card-block">
                         <h3 class="card-title">
                             {{position}}
-                            {{#if organization}}
-                                <span class="card-subtitle">{{organization}}</span>
+                            <span class="card-subtitle">
+                                {{organization}}
+                                {{#if website.length}}
+                                | <a class="text-secondary" href="{{website}}">
+                                    <i class="fas fa-link"></i>
+                                    <span>{{removeSchema website}}</span>
+                                </a>
                             {{/if}}
+                            </span>
                         </h3>
                         {{#if summary}}
                             <div class="card-text">{{{summary}}}</div>
@@ -38,12 +44,6 @@
                                     </li>
                                 {{/each}}
                             </ul>
-                        {{/if}}
-                        {{#if website.length}}
-                            <a class="card-link icon-item text-secondary" href="{{website}}">
-                                <i class="fas fa-link"></i>
-                                <span>{{website}}</span>
-                            </a>
                         {{/if}}
                     </div>
                 {{/or}}

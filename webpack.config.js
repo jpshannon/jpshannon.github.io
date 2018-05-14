@@ -4,7 +4,9 @@ const path = require('path');
 const { optimize: { splitChunks }, ProvidePlugin } = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const HtmlPdfPlugin = require('html-pdf-plugin');
 const config = require('./config');
+
 
 const ensureArray = (config) => config && (Array.isArray(config) ? config : [config]) || []
 const when = (condition, config, negativeConfig) =>
@@ -59,15 +61,15 @@ module.exports = ({ production, server, coverage } = {}) => ({
 			Popper: ['popper.js', 'default'] // for bootstrap 4
 		}),
 		new ExtractTextPlugin({ filename: '[name].css', allChunks: true }),
-		// ...when(prouction, new CommonsChunkPlugin({
+		// ...when(production, new CommonsChunkPlugin({
 		// 	name: 'common'
 		// })),
 		new HtmlWebPackPlugin({
 			template: config.resume.template,
 			filename: production ? '../index.html' : 'index.html',
-
 			resume: require(config.path.resume),
-			resumeConfig: config.resume
-		})
+			resumeConfig: config.resume.options
+		}),
+		...when(production, new HtmlPdfPlugin(config.resume.options))
 	],
 })
