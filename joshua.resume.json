@@ -6,7 +6,7 @@
 		"email": "jshannon421@gmail.com",
 		"phone": "(501) 240-5538",
 		"website": "https://binarycomplex.com",
-		"summary": "",
+		"summary": "Innovative Software Developer with 15 years of experience in online development. Specialized in forward-thinking development, I am adept in building adaptable systems that meet todays needs and are ready for tomorrow's demands. Technology is my second language and code is my playground.",
 		"location": {
 			"address": "8412 Oak Ridge Rd",
 			"postalCode": "AR 72120",
@@ -42,7 +42,7 @@
 			"summary": "",
 			"highlights": [
 				"Development of an API to generate REST APIs from data sources such as CSV files, Web APIs and SQL servers",
-				"Backend development of V1 and V2 of Gov2Go Mobile Application using PHP and REST",
+				"Backend development of V1 and V2 of Gov2Go Mobile Application using PHP and REST hosted in AWS",
 				"Architect and development of a system extension for processing Trademark filings for Arkansas Secretary of State's Business and Commercial Services using ASP.NET WebForms"
 			]
 		},
