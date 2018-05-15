@@ -27,6 +27,5 @@ module.exports = {
 			format: 'a4',
 			filename: 'resume.pdf'
 		}
-
 	}
 }

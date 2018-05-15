@@ -24,7 +24,7 @@ module.exports = {
         production: {
           default: series(
             'nps webpack.build.before',
-            crossEnv('NODE_ENV=production webpack --progress -p --env.production')
+            crossEnv('NODE_ENV=production webpack --progress -p --env.production --env.watermark')
           ),
           serve: series.nps(
             'webpack.build.production',

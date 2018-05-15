@@ -12,7 +12,7 @@ const ensureArray = (config) => config && (Array.isArray(config) ? config : [con
 const when = (condition, config, negativeConfig) =>
 	condition ? ensureArray(config) : ensureArray(negativeConfig)
 
-module.exports = ({ production, server, coverage } = {}) => ({
+module.exports = ({ production, server, coverage, watermark } = {}) => ({
 	mode: production ? 'production' : 'development',
 	devtool: production ? 'source-map' : 'cheap-module-eval-source-map',
 	entry: {
@@ -68,7 +68,8 @@ module.exports = ({ production, server, coverage } = {}) => ({
 			template: config.resume.template,
 			filename: production ? '../index.html' : 'index.html',
 			resume: require(config.path.resume),
-			resumeConfig: config.resume.options
+			resumeConfig: config.resume.options,
+			watermark: watermark ? true : false
 		}),
 		...when(production, new HtmlPdfPlugin(config.resume.options))
 	],
