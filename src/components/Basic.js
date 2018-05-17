@@ -10,7 +10,7 @@ export default function Basic(props) {
 		return null;
 	}
 	return (
-		<Section className="basics" header={
+		<Section article className="basics" header={
 			<Container>
 				<Avatar src={basics.picture} alt={basics.name} />
 				<h1>{basics.name}</h1>

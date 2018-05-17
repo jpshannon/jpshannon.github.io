@@ -1,7 +1,6 @@
 import React from 'react';
 import ListItem from './ListItem';
 import Section from './Section';
-import SectionTitle from './SectionTitle';
 import { removeSchema } from './helpers';
 
 export default function Contact(props) {
@@ -24,8 +23,7 @@ export default function Contact(props) {
 	}
 
 	return (
-		<Section
-			header={ <SectionTitle icon="phone" title="Contact" /> }>
+		<Section article icon="phone" title="Contact">
 			<ul>
 				{items}
 			</ul>
