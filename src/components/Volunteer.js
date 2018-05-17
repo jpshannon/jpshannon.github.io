@@ -12,7 +12,7 @@ export default function Volunteer(props) {
 			{section.map((item, idx) =>
 				<SectionItem key={idx}
 					title={item.position}
-					subtitle={item.company}
+					subtitle={item.organization}
 					startDate={item.startDate}
 					endDate={item.endDate}
 					highlights={item.highlights}
