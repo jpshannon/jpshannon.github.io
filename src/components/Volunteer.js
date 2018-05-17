@@ -1,17 +1,18 @@
 import React from 'react';
 import Section from './Section';
-import Experience from './Experience';
+import SectionItem from './SectionItem';
 
 export default function Volunteer(props) {
-	if (!props.resume.volunteer.length === 0) {
+	const section = props.resume.volunteer;
+	if (!Array.isArray(section) || section.length === 0) {
 		return null;
 	}
 	return (
 		<Section article className="volunteer" icon="hands-helping" title="Volunteer">
-			{props.resume.volunteer.map((item, idx) =>
-				<Experience key={idx} title={item.position} subtile={item.company} startDate={item.startDate} endDate={item.endDate} highlights={item.highlights}>
+			{section.map((item, idx) =>
+				<SectionItem key={idx} title={item.position} subtile={item.company} startDate={item.startDate} endDate={item.endDate} highlights={item.highlights}>
 					{item.summary}
-				</Experience>
+				</SectionItem>
 			)}
 		</Section>
 	)

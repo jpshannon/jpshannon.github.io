@@ -7,7 +7,6 @@ import Basic from './components/Basic';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Education from './components/Education';
-import Experience from './components/Experience';
 import Interests from './components/Interests';
 import Languages from './components/Languages';
 import Publications from './components/Publications';

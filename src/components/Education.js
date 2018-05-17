@@ -1,15 +1,16 @@
 import React from 'react';
 import Section from './Section';
-import Experience from './Experience';
+import SectionItem from './SectionItem';
 
 export default function Education(props) {
-	if (!props.resume.education.length === 0) {
+	const section = props.resume.education;
+	if (!Array.isArray(section) || section.length === 0) {
 		return null;
 	}
 	return (
 		<Section article className="education" icon="tasks" title="Education">
-			{props.resume.education.map((item,idx) =>
-				<Experience key={idx} title={`${item.studyType} ${item.area}`} subtile={item.institution} startDate={item.startDate} endDate={item.endDate} highlights={item.courses} />
+			{section.map((item,idx) =>
+				<SectionItem key={idx} title={`${item.studyType} ${item.area}`} subtile={item.institution} startDate={item.startDate} endDate={item.endDate} highlights={item.courses} />
 			)}
 		</Section>
 	)
