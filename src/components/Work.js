@@ -10,7 +10,13 @@ export default function Work(props) {
 	return (
 		<Section article className="work" icon="briefcase" title="Experience">
 			{section.map((item, idx) =>
-				<SectionItem key={idx} title={item.position} subtile={item.company} startDate={item.startDate} endDate={item.endDate} highlights={item.highlights}>
+				<SectionItem key={idx}
+					title={item.position}
+					subtile={item.company}
+					startDate={item.startDate}
+					endDate={item.endDate}
+					highlights={item.highlights}
+					url={item.website}>
 				{item.summary}
 				</SectionItem>
 			)}

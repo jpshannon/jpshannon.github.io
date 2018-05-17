@@ -6,7 +6,11 @@ import TitleDates from './TitleDates'
 export default function SectionItem(props) {
 	return (
 		<Section
-			header={<TitleDates subtitle={props.subtitle} startDate={props.startDate} endDate={props.endDate}>{props.title}</TitleDates>}>
+			header={<TitleDates
+				subtitle={props.subtitle}
+				startDate={props.startDate}
+				endDate={props.endDate}
+				url={props.url}>{props.title}</TitleDates>}>
 			{props.children}
 			{Array.isArray(props.highlights) && props.highlights.length > 0 && (
 				<ul>

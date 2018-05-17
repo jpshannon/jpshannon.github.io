@@ -10,7 +10,7 @@ export default function Volunteer(props) {
 	return (
 		<Section article className="volunteer" icon="hands-helping" title="Volunteer">
 			{section.map((item, idx) =>
-				<SectionItem key={idx} title={item.position} subtile={item.company} startDate={item.startDate} endDate={item.endDate} highlights={item.highlights}>
+				<SectionItem key={idx} title={item.position} subtile={item.company} startDate={item.startDate} endDate={item.endDate} highlights={item.highlights} url={item.website}>
 					{item.summary}
 				</SectionItem>
 			)}
