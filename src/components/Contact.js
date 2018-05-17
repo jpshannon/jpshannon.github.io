@@ -9,7 +9,7 @@ export default function Contact(props) {
 	let items = [];
 
 	if (basics.email) {
-		items.push (<ListItem key="email" icon="envelope" url="mailto:{basics.email}" text={basics.email} />);
+		items.push (<ListItem key="email" icon="envelope" url={`mailto: ${basics.email}`} text={basics.email} />);
 	}
 	if (basics.phone) {
 		items.push(<ListItem key="phone" icon="phone" text={basics.phone} />);
@@ -23,7 +23,7 @@ export default function Contact(props) {
 	}
 
 	return (
-		<Section article icon="phone" title="Contact">
+		<Section article icon="address-book" title="Contact">
 			<ul>
 				{items}
 			</ul>

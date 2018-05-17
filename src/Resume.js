@@ -15,6 +15,13 @@ import Skills from './components/Skills';
 import Volunteer from './components/Volunteer';
 import Work from './components/Work';
 
+import fontawesome from '@fortawesome/fontawesome'
+import brands from '@fortawesome/fontawesome-free-brands'
+import { faBeer, faLink, faUserTie, faBriefcase, faThumbsUp, faHandsHelping, faAddressCard, faTrophy, faCertificate,
+		faEnvelope, faPhone, faUserGraduate, faComments, faBookOpen, faUserNinja } from '@fortawesome/fontawesome-free-solid'
+
+fontawesome.library.add(brands, faBeer, faLink, faUserTie, faBriefcase, faThumbsUp, faHandsHelping, faAddressCard, faTrophy, faCertificate,
+	faEnvelope, faPhone, faUserGraduate, faComments, faBookOpen, faUserNinja);
 
 export default class Resume extends Component {
 	constructor(props) {

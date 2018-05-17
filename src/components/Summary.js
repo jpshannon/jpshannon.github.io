@@ -8,7 +8,7 @@ export default function Basic(props) {
 		return null;
 	}
 	return (
-		<Section article className="summary" icon="paperclip" title="Summary">
+		<Section article className="summary" icon="user-tie" title="Summary">
 			<p>{basics.summary}</p>
 		</Section>
 	)

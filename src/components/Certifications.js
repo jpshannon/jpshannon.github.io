@@ -8,7 +8,7 @@ export default function Certifications(props) {
 		return null;
 	}
 	return (
-		<Section article className="certifications" icon="certification" title="Certifications">
+		<Section article className="certifications" icon="certificate" title="Certifications">
 			{section.map((item, idx) =>
 				<SectionItem key={idx} title={item.title} subtile={item.awarder} startDate={item.date}>
 					{item.summary}

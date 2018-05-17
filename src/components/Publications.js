@@ -8,7 +8,7 @@ export default function Publications(props) {
 		return null;
 	}
 	return (
-		<Section article className="publications" icon="pushpin" title="Publications">
+		<Section article className="publications" icon="book-open" title="Publications">
 			{section.map((item, idx) =>
 				<SectionItem key={idx} title={item.name} subtile={item.publisher} startDate={item.releaseDate} url={item.website}>
 					{item.summary}

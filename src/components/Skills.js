@@ -9,7 +9,7 @@ export default function Skills(props) {
 		return null;
 	}
 	return (
-		<Section article className="skills" title="Skills" icon="tasks">
+		<Section article className="skills" title="Skills" icon="user-ninja">
 			{section.map(skill =>
 				<Definitions key={skill.name} title={skill.name} level={skill.level}>
 					{skill.keywords.map(word=><ListItem definition text={word} key={word} />)}

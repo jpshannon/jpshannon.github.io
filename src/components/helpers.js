@@ -7,5 +7,5 @@ export function faIcon(icon, brand = false) {
 		return null;
 	}
 	icon = icon.replace(/[^a-z0-9]/gi, '-').toLowerCase();
-	return brand ? 'fab fa-' + icon : 'fas fa-' + icon;
+	return brand ? ['fab', icon] : ['fas', icon];
 }
