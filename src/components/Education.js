@@ -1,8 +1,6 @@
 import React from 'react';
 import Section from './Section';
-import ListItem from './ListItem';
-import DateRange from './DateRange';
-import Container from './Container';
+import Experience from './Experience';
 
 export default function Education(props) {
 	if (!props.resume.education.length === 0) {
@@ -10,22 +8,8 @@ export default function Education(props) {
 	}
 	return (
 		<Section article className="education" icon="tasks" title="Education">
-			{props.resume.education.map((edu,idx) =>
-				<Section
-					key={idx}
-					header={
-						<Container>
-							<h3>{edu.studyType} {edu.area}</h3>
-							<h4>{edu.institution}</h4>
-							<DateRange start={edu.startDate} end={edu.endDate} />
-						</Container>
-					}>
-					{edu.courses.length > 0 && (
-						<ul>
-							{edu.course.map(course => <ListItem key={course} text={course} />)}
-						</ul>
-					)}
-				</Section>
+			{props.resume.education.map((item,idx) =>
+				<Experience key={idx} title={`${item.studyType} ${item.area}`} subtile={item.institution} startDate={item.startDate} endDate={item.endDate} highlights={item.courses} />
 			)}
 		</Section>
 	)
