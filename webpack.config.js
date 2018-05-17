@@ -29,7 +29,8 @@ module.exports = ({ production, server, coverage, watermark } = {}) => ({
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['env', 'react']  // TODO: investigate why this isn't loading .bablerc
+						presets: ['env', 'react'],  // TODO: investigate why this isn't loading .bablerc
+						plugins: ['transform-object-rest-spread']
 					}
 				},
 				exclude: config.path.nodeModulesDir
