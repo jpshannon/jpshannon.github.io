@@ -4,7 +4,7 @@ import Container from './Container';
 export default function ResumeLayout(props) {
 	return (
 		<Container>
-			<main>
+			<main role="main">
 				{props.basics}
 			</main>
 			<aside>
