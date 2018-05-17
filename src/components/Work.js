@@ -12,7 +12,7 @@ export default function Work(props) {
 			{section.map((item, idx) =>
 				<SectionItem key={idx}
 					title={item.position}
-					subtile={item.company}
+					subtitle={item.company}
 					startDate={item.startDate}
 					endDate={item.endDate}
 					highlights={item.highlights}

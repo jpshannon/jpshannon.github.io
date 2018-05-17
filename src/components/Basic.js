@@ -2,6 +2,7 @@ import React from 'react';
 import Section from './Section';
 import Container from './Container';
 import Avatar from './Avatar';
+import Summary from './Summary';
 
 
 export default function Basic(props) {
@@ -17,9 +18,7 @@ export default function Basic(props) {
 				<h2>{basics.label}</h2>
 			</Container>
 		}>
-			{basics.summary.length > 0 && (
-				<p className="summary">{basics.summary}</p>
-			)}
+			<Summary resume={props.resume} />
 		</Section>
 	)
 }
