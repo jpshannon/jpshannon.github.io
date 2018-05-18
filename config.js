@@ -21,8 +21,9 @@ module.exports = {
 		options: {
 			url: path.resolve(__dirname, 'index.html'),
 			path: path.resolve(__dirname),
-			format: 'a4',
-			filename: 'resume.pdf'
+			format: 'Letter',
+			filename: 'resume.pdf',
+			pageRanges: '1',
 		}
 	}
 }
