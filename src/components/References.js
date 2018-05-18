@@ -8,8 +8,8 @@ export default function References(props) {
 		return null;
 	}
 	return (
-		<SectionItem className="references" icon="thumbs-up" title="References">
+		<Section article className="references" icon="thumbs-up" title="References">
 			{section.map((item,idx) =><Section key={idx} title={item.name}>{item.reference}</Section>)}
-		</SectionItem>
+		</Section>
 	)
 }

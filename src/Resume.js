@@ -29,32 +29,32 @@ export default class Resume extends Component {
 	}
 
 	componentDidMount() {
-		var beforePrint = function () {
-			var pageHeights = {
-				letter: 792,
-				a4: 842
-			}
-			var html = document.querySelector('.page')
-			var pageHeight = pageHeights[html.getAttribute('data-page-size').toLowerCase()];
-			var height = html.scrollHeight;
-			if (height / pageHeight !== 0) {
-				html.style.height = (Math.ceil(height / pageHeight) * pageHeight) + 'px'
-			}
-		}
-		var afterPrint = function () {
-			var html = document.querySelector('.page');
-			html.style.height = 'auto';
-		}
-		if (window.matchMedia) {
-			var mediaQueryList = window.matchMedia('print');
-			mediaQueryList.addListener(function (mql) {
-				if (mql.matches) {
-					beforePrint();
-				} else {
-					afterPrint();
-				}
-			});
-		}
+		// var beforePrint = function () {
+		// 	var pageHeights = {
+		// 		letter: 792,
+		// 		a4: 842
+		// 	}
+		// 	var html = document.querySelector('.page')
+		// 	var pageHeight = pageHeights[html.getAttribute('data-page-size').toLowerCase()];
+		// 	var height = html.scrollHeight;
+		// 	if (height / pageHeight !== 0) {
+		// 		html.style.height = (Math.ceil(height / pageHeight) * pageHeight) + 'px'
+		// 	}
+		// }
+		// var afterPrint = function () {
+		// 	var html = document.querySelector('.page');
+		// 	html.style.height = 'auto';
+		// }
+		// if (window.matchMedia) {
+		// 	var mediaQueryList = window.matchMedia('print');
+		// 	mediaQueryList.addListener(function (mql) {
+		// 		if (mql.matches) {
+		// 			beforePrint();
+		// 		} else {
+		// 			afterPrint();
+		// 		}
+		// 	});
+		// }
 	}
 	render() {
 		const resume = this.props.jsonResume;

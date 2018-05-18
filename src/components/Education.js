@@ -10,7 +10,7 @@ export default function Education(props) {
 	return (
 		<Section article className="education" icon="user-graduate" title="Education">
 			{section.map((item,idx) =>
-				<SectionItem key={idx} title={`${item.studyType} ${item.area}`} subtile={item.institution} startDate={item.startDate} endDate={item.endDate} highlights={item.courses} />
+				<SectionItem key={idx} title={`${item.studyType} ${item.area}`} subtile={item.institution} startDate={item.startDate} endDate={item.endDate} highlights={item.courses} hideDateSpan />
 			)}
 		</Section>
 	)
