@@ -1,0 +1,140 @@
+{
+	"basics": {
+		"name": "Joshua Shannon",
+		"label": "Software Engineer",
+		"picture": "",
+		"email": "jshannon421@gmail.com",
+		"phone": "(501) 240-5538",
+		"website": "https://binarycomplex.com",
+		"summary": "Innovative Software Engineer with experience across multiple stacks including ASP.NET WebForms and MVC, PHP/Laravel, Node, MySQL, MSSQL and MongoDb . Forward-thinker, adept at designing systems that meet the needs of today, and are ready for the demands of tomorrow. Technology is my second language and code is my playground.",
+		"location": {
+			"address": "8412 Oak Ridge Rd",
+			"postalCode": "AR 72120",
+			"city": "Sherwood",
+			"countryCode": "US",
+			"region": "Arkansas"
+		},
+		"profiles": [
+			{
+				"network": "Twitter",
+				"username": "ninjps",
+				"url": "https://twitter.com/ninjps"
+			},
+			{
+				"network": "Github",
+				"username": "jpshannon",
+				"url": "https://github.com/jpshannon"
+			},
+			{
+				"network": "LinkedIn",
+				"url": "https://www.linkedin.com/in/joshuashannon/",
+				"username": "joshuashannon"
+			}
+		]
+	},
+	"work": [
+		{
+			"company": "Arkansas Information Consortium",
+			"position": "Lead Software Architect",
+			"website": "https://ina.arkansas.gov",
+			"startDate": "2013-05-01",
+			"endDate": "2018-05-01",
+			"summary": "",
+			"highlights": [
+				"Development of an API to generate REST APIs from data sources such as CSV files, Web APIs and SQL servers",
+				"Backend development of V1 and V2 of Gov2Go Mobile Application using PHP and REST hosted in AWS",
+				"Architect and development of a system extension for processing Trademark filings for Arkansas Secretary of State's Business and Commercial Services using ASP.NET WebForms"
+			]
+		},
+		{
+			"company": "Arkansas Information Consortium",
+			"position": "Developer II",
+			"website": "https://ina.arkansas.gov",
+			"startDate": "2011-01-01",
+			"endDate": "2013-05-01",
+			"summary": "Development and Maintenance of the Arkansas Secretary of State's Business and Commercial Services filing application using ASP.NET WebForms.",
+			"highlights": [
+			]
+		},
+		{
+			"company": "Flex360",
+			"position": "Web Developer",
+			"website": "https://www.flex360.com/",
+			"startDate": "2010-03-01",
+			"endDate": "2011-01-01",
+			"summary": "Development of Client websites utilizing PHP, CSS and Javascript.",
+			"highlights": [
+			]
+		},
+		{
+			"company": "Aristotle.net",
+			"position": "Programming Team Leader",
+			"website": "https://www.aristotleinteractive.com/",
+			"startDate": "2004-01-01",
+			"endDate": "2010-03-01",
+			"summary": "Manage a team of 3 Developers and coordinate projects with a team of 3 Producers while also implementing new product features.",
+			"highlights": [
+				"Architect and Development of an ASP.NET Content Management System used as starting point for Client websites",
+				"Development of tools and libraries to improve code reuse among the development staff"
+			]
+		}
+
+	],
+	"volunteer": [
+		{
+			"organization": "Little Rock Kickball Association",
+			"position": "League Representative",
+			"website": "http://lrkickball.com/",
+			"startDate": "2012-01-01",
+			"summary": "Work with other representatives to manage the LRKA under Larry Betz (Poo)",
+			"highlights": [
+			]
+		}
+	],
+	"education": [
+		{
+			"institution": "University of Arkansas at Little Rock",
+			"area": "Computer Science",
+			"studyType": "Bachelor",
+			"startDate": "1997-09-01",
+			"endDate": "2002-05-01",
+			"courses": [
+			]
+		}
+	],
+	"skills": [
+		{
+			"name": "Frontend",
+			"keywords": [
+				"HTML",
+				"CSS",
+				"Javascript",
+				"React"
+			]
+		},
+		{
+			"name": "Backend",
+			"keywords": [
+				".NET",
+				"REST",
+				"PHP",
+				"Node",
+				"MSSQL",
+				"MySQL"
+			]
+		},
+		{
+			"name": "DevOps",
+			"keywords": [
+				"Git",
+				"Jenkins",
+				"Docker"
+			]
+		}
+	],
+	"references": [
+		{
+			"reference": "Available on Request"
+		}
+	]
+}

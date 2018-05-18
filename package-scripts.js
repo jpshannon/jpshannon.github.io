@@ -38,6 +38,7 @@ module.exports = {
         hmr: `webpack-dev-server -d --inline --hot --env.server`
       },
     },
-    serve: 'http-server '+ config.outDir +' --cors'
+    serve: 'http-server '+ config.outDir +' --cors',
+    hmr: 'nps webpack.server.hmr'
   }
 };

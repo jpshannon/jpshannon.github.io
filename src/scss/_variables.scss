@@ -27,71 +27,24 @@ $sidebar-secondary: $color-secondary;
 
 $elite-font-path: "../fonts";
 $elite-font-name: "elite";
-$el-trophy: "\e901";
-$el-medal: "\e900";
-$el-hand-up: "\e0d4";
-$el-beer: "\e15d";
-$el-book: "\e156";
-$el-calendar: "\e14b";
-$el-comments-alt: "\e125";
-$el-edit: "\e112";
-$el-envelope: "\e10e";
-$el-thumbs-up: "\e027";
-$el-tasks: "\e031";
-$el-tags: "\e032";
-$el-suitcase: "\e038";
-$el-pushpin: "\e07f";
-$el-phone: "\e08b";
-$el-map-marker: "\e0a4";
-$el-link: "\e0b9";
-$el-paperclip: "\e093";
-$el-tumblr: "\e01e";
-$el-twitter: "\e01a";
-$el-xing: "\e005";
-$el-youtube: "\e003";
-$el-stackoverflow: "\e046";
-$el-vimeo: "\e00d";
-$el-skype: "\e054";
-$el-instagram: "\e0c6";
-$el-linkedin: "\e0b6";
-$el-pinterest: "\e089";
-$el-google-plus: "\e0da";
-$el-github: "\e0e1";
-$el-facebook: "\e102";
-$el-dribbble: "\e115";
-$el-bitbucket: "\e159";
+
 
 // Font Sizes
 
 $font-family-sans-serif: 'Maven Pro', sans-serif;
-$font-size-base: 0.668rem;
-// $font-size-h1: 1.3rem;
-$h1-font-size: $font-size-base * 2;
-$h2-font-size: $font-size-base * 1.5;
-$h3-font-size: $font-size-base * 1.3;
-$h4-font-size: $font-size-base * 1.2;
-$font-size-h5: 0.55rem;
 
 // Page
+$scale: (
+	'smaller': .563em,
+	'small': 0.75em,
+	'normal': 1em,
+	'large': 1.333em,
+	'larger': 1.777em,
+	'largest': 2.369em
+);
+
 
 $page-width: 50rem;
-$spacer: 16px;
+$spacer: map-get($scale, 'normal');
 $sidebar-width: 14rem;
 $avatar-size: 90px;
-
-// Tables
-
-$table-cell-padding: 0.5rem;
-
-// Progress Bars
-
-$progress-border-radius: 0;
-$progress-bg: transparent;
-$progress-border-color: $color-secondary;
-$progress-box-shadow: none;
-$progress-height: 0.5rem;
-
-// Badges
-
-$badge-padding-y: 0.2rem;
-$badge-border-radius: 2px;

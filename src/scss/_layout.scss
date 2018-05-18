@@ -1,56 +1,95 @@
 // Layout
 // ----------------------------------------------
-
+// bootstrap: @include media-breakpoint-[down|up|only|between]([xs|sm|md|lg|xl], [xs|sm|md|lg|xl]) { ... }
+html, body {height: 100%;}
 body {
-  margin: 2rem 0;
   background-color: $background-bg;
+  display: flex;
+  align-items: center;
 }
+
+
 
 .page {
   background: $page-bg;
   width: $page-width;
   display: flex;
+  flex-flow: column wrap;
   margin: 0 auto;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  font-size: map-get($scale, small);
 
-  .sidebar {
-    background-color: $sidebar-bg;
+
+  main {
+    flex: 1;
+    display: flex;
+    .sidebar {
+      background-color: $sidebar-bg;
+      color: $sidebar-color;
+      flex: 0 0 $sidebar-width;
+      width: $sidebar-width;
+    }
+
+    .content {
+      flex: 1;
+      background-color: $page-bg;
+      color: $page-color;
+    }
+  }
+}
+
+.basics {
+  display: flex;
+  width: $page-width;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+
+  & > header {
+    background-color: darken($sidebar-bg, 5%);
     color: $sidebar-color;
     flex: 0 0 $sidebar-width;
     width: $sidebar-width;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-transform:uppercase;
+    text-align: center;
+    font-size: map-get($scale, small)
   }
 
-  .content {
+  .summary {
     flex: 1;
     background-color: $page-bg;
     color: $page-color;
-    position: relative;
-
-    .watermark {
-      $watermark-height: 12px;
-
-      opacity: 0.3;
-      position: absolute;
-      top: $spacer;
-      right: $spacer;
-      display: flex;
-      align-items: center;
-      width: 90px;
-
-      a {
-        flex: 1;
-        text-align: right;
-        margin-right: 0.2rem;
-        font-size: 0.5rem;
-        line-height: 1;
-      }
-
-      i, svg {
-        flex-basis: $watermark-height;
-        height: $watermark-height;
-      }
-    }
+    margin-bottom: 0;
   }
+}
+
+article {
+    $mv: map-get($scale, 'large');
+    $mh: map-get($scale, 'large');
+    margin: $mv $mh $mv * 2;
+
+    & > header > h2 {
+        $icon-bg-size: map-get($scale, 'large');
+
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+
+        .icon {
+          background-color: darken($page-bg, 4%);
+          border-radius: 50%;
+          width: $icon-bg-size;
+          height: $icon-bg-size;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-basis: $icon-bg-size;
+        }
+    }
 }
 
 .sidebar {
@@ -59,93 +98,49 @@ body {
     margin: 0 $spacer 0;
   }
 
-  [class^="section-"] {
-    padding: $spacer;
+  a { color: $sidebar-color; }
+
+  section {
+    margin-left: $spacer;
+    margin-right: $spacer;
   }
 
-  [class^="section-"] .title {
-    font-size: 0.9rem;
-    line-height: 0.9rem;
+  h2 {
+    font-size: map-get($scale, 'large');
+    line-height: map-get($scale, 'large');
 
-    .title-icon {
+    .icon {
        background-color: transparent;
-    //   padding: 0;
-    //   width: auto;
-    //   height: auto;
-    //   display: none;
-    }
-
-    span {
-      margin: 0;
-      color: $sidebar-color !important;
     }
   }
 
-  .progress-dots .dot {
-    border-color: $sidebar-secondary;
+  .contact-info {
+    list-style: none;
+    padding-left: map-get($scale, 'normal');
+    line-height: 2;
+  }
 
-    &.active {
-      background-color: $sidebar-primary;
-      border-color: $sidebar-primary;
-    }
+  .tags {
+    padding-left: map-get($scale, 'normal');
   }
 }
 
-[class^="section-"] {
-  width: 100%;
-}
-
-[class^="section-"] .title {
-  $icon-bg-size: 28px;
-
-  text-transform: uppercase;
-  padding: $spacer $spacer 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-
-  span {
-    margin-left: 0.25rem;
-    flex: 1;
-    line-height: 1;
+.detail {
+  .content & {
+    margin-bottom: map-get($scale, 'larger');
   }
 
-  .title-icon {
-    background-color: darken($page-bg, 4%);
-    border-radius: 50%;
-    width: $icon-bg-size;
-    height: $icon-bg-size;
+  header {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-basis: $icon-bg-size;
+    flex-flow: row wrap;
+    justify-content: space-between;
 
-    i, svg {
+    .position {
       flex: 1;
-      align-self: center;
-      height: $h2-font-size;
+      text-transform: uppercase;
+      a {
+        text-transform: lowercase;
+      }
     }
-  }
-}
-
-@if $enable-skills-sidebar == true {
-  .sidebar .section-skills {
-    display: block;
-  }
-
-  .content .section-skills {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@else {
-  .sidebar .section-skills {
-    display: none;
-    visibility: hidden;
-  }
-
-  .content .section-skills {
-    display: block;
   }
 }

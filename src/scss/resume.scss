@@ -1,0 +1,22 @@
+// Jsonresume Theme Elite
+// ----------------------------------------------
+
+// Variables
+
+@import "variables";
+
+// Vendor
+
+@import "bootstrap/scss/_functions.scss";
+@import "bootstrap/scss/_variables.scss";
+@import "bootstrap/scss/_mixins.scss";
+@import "bootstrap/scss/_utilities.scss";
+@import "bootstrap/scss/_reboot.scss";
+@import "bootstrap/scss/_type.scss";
+
+// Components
+
+@import "_fonts";
+@import "_layout";
+@import "_print";
+@import "_general";

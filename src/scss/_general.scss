@@ -1,0 +1,67 @@
+
+h1, .h1 {
+	font-size: map-get($scale, largest);
+	color: $brand-primary;
+}
+h2, .h2 {
+	font-size: map-get($scale, larger);
+}
+h3, .h3 {
+	font-size: map-get($scale, large);
+}
+h4, .h4 {
+	font-size: map-get($scale, normal);
+	color: $page-secondary;
+
+	a {
+		color: $page-secondary;
+	}
+}
+h5, .h5 {
+	font-size: map-get($scale, smaller);
+}
+
+h3 + h4 { margin-top: -.25em }
+
+.dates {
+	color: $page-secondary;
+	.date-span {
+		display:block;
+		text-align: center;
+
+		&::before {
+			content: '(';
+		}
+
+		&::after {
+			content: ')';
+		}
+	}
+}
+
+
+.icon {
+	color: $brand-primary;
+	margin-right: map-get($scale, 'smaller');
+
+	.contact-info & {
+		color: $sidebar-color;
+	}
+}
+
+.tags {
+	dt {
+		text-transform: uppercase;
+		font-weight: normal;
+	}
+	dd {
+		display: inline;
+		color: $color-secondary;
+		&::after {
+			content: ", ";
+		}
+		&:last-of-type::after {
+			content: '';
+		}
+	}
+}

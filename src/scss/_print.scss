@@ -7,8 +7,7 @@
 
   html,
   body {
-    margin: 0;
-    width: 100%;
+    align-items: stretch;
   }
 
   .page {
@@ -27,20 +26,16 @@
 }
 
 /* style sheet for "A4" printing */
- @media print and (width: 21cm) and (height: 29.7cm) {
-   @page {
-     size: A4;
-   }
-    .page {
-      min-height: 29.7cm;
-    }
- }
- /* style sheet for "letter" printing */
- @media print and (width: 8.5in) and (height: 11in) {
-   @page {
-     size: Letter;
-   }
-    .page {
-      min-height: 11in;
-    }
- }
+@media print and (width: 21cm) and (height: 29.7cm) {
+  @page {
+    size: A4;
+  }
+
+}
+
+/* style sheet for "letter" printing */
+@media print and (width: 8.5in) and (height: 11in) {
+  @page {
+    size: Letter;
+  }
+}
