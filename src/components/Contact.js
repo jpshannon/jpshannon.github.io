@@ -15,7 +15,7 @@ export default function Contact(props) {
 		items.push(<ListItem key="phone" icon="phone" text={basics.phone} />);
 	}
 	if (basics.website) {
-		items.push(<ListItem key="website" icon="link" url="{basics.website}" text={removeSchema(basics.website)} />);
+		items.push(<ListItem key="website" icon="link" url={basics.website} text={removeSchema(basics.website)} />);
 	}
 
 	if (basics.profiles.length > 0) {
