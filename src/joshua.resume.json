@@ -1,12 +1,12 @@
 {
 	"basics": {
 		"name": "Joshua Shannon",
-		"label": "Software Engineer",
+		"label": "Software Developer",
 		"picture": "",
 		"email": "jshannon421@gmail.com",
 		"phone": "(501) 240-5538",
 		"website": "https://binarycomplex.com",
-		"summary": "Innovative Software Engineer with experience across multiple stacks including ASP.NET WebForms/MVC, PHP/Laravel, NodeJS, MySQL, MSSQL and MongoDb. Forward-thinker, adept at designing systems that meet the needs of today, while being ready for the demands of tomorrow. Technology is my second language and code is my playground.",
+		"summary": "Innovative Software Developer with experience across multiple stacks including ASP.NET WebForms/MVC, PHP/Laravel, NodeJS, MySQL, MSSQL and MongoDb. Forward-thinker, adept at designing systems that meet the needs of today, while being ready for the demands of tomorrow. Technology is my second language and code is my playground.",
 		"location": {
 			"address": "8412 Oak Ridge Rd",
 			"postalCode": "AR 72120",
