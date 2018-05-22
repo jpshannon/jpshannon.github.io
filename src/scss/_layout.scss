@@ -23,6 +23,7 @@ body {
   main {
     flex: 1;
     display: flex;
+
     .sidebar {
       background-color: $sidebar-bg;
       color: $sidebar-color;
@@ -56,7 +57,8 @@ body {
     flex-direction: column;
     text-transform:uppercase;
     text-align: center;
-    font-size: map-get($scale, small)
+    //font-size: map-get($scale, small);
+    padding: $spacer $spacer/2;
   }
 
   .summary {
