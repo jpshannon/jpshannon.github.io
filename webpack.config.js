@@ -15,12 +15,19 @@ module.exports = ({ production, server, coverage, watermark } = {}) => ({
 	mode: production ? 'production' : 'development',
 	devtool: production ? 'source-map' : 'cheap-module-eval-source-map',
 	resolve: { extensions: ['*', '.js', '.jsx'] },
-	entry: {
-		app: config.appEntry,
-		vendor: config.vendors,
-	},
+	entry: config.entry,
 	output: {
 		path: config.path.outDir
+	},
+	optimization: {
+		splitChunks: {
+			chunks: "initial",
+			cacheGroups: {
+				fontawesome: {
+					test: /fontawesome(\\-free)?/
+				}
+			}
+		}
 	},
 	module: {
 		rules: [

@@ -16,19 +16,24 @@
 		},
 		"profiles": [
 			{
-				"network": "Twitter",
-				"username": "ninjps",
-				"url": "https://twitter.com/ninjps"
-			},
-			{
 				"network": "Github",
 				"username": "jpshannon",
 				"url": "https://github.com/jpshannon"
 			},
 			{
+				"network": "Stack Overflow",
+				"username": "jshannon",
+				"url": "https://stackoverflow.com/story/jshannon"
+			},
+			{
 				"network": "LinkedIn",
 				"url": "https://www.linkedin.com/in/joshuashannon/",
 				"username": "joshuashannon"
+			},
+			{
+				"network": "Twitter",
+				"username": "ninjps",
+				"url": "https://twitter.com/ninjps"
 			}
 		]
 	},
@@ -39,7 +44,7 @@
 			"website": "https://ina.arkansas.gov",
 			"startDate": "2013-05-01",
 			"endDate": "2018-05-01",
-			"summary": "",
+			"summary": "Architect and develop new applications to support the growing portfolio of agencies connecting to citizens. Peer review and mentorship of other developers. Maintain and improve performance of existing applications.",
 			"highlights": [
 				"Development of an API to generate REST APIs from data sources such as CSV files, Web APIs and SQL servers",
 				"Backend development of V1 and V2 of Gov2Go Mobile Application using PHP and REST hosted in AWS",
@@ -53,8 +58,7 @@
 			"startDate": "2011-01-01",
 			"endDate": "2013-05-01",
 			"summary": "Development and Maintenance of the Arkansas Secretary of State's Business and Commercial Services filing application using ASP.NET WebForms.",
-			"highlights": [
-			]
+			"highlights": []
 		},
 		{
 			"company": "Flex360",
@@ -63,8 +67,7 @@
 			"startDate": "2010-03-01",
 			"endDate": "2011-01-01",
 			"summary": "Development of Client websites utilizing PHP, CSS and Javascript.",
-			"highlights": [
-			]
+			"highlights": []
 		},
 		{
 			"company": "Aristotle.net",
@@ -78,7 +81,6 @@
 				"Development of tools and libraries to improve code reuse among the development staff"
 			]
 		}
-
 	],
 	"volunteer": [
 		{
@@ -87,8 +89,7 @@
 			"website": "http://lrkickball.com/",
 			"startDate": "2012-01-01",
 			"summary": "Work with other representatives to manage the LRKA under Larry Betz (Poo).",
-			"highlights": [
-			]
+			"highlights": []
 		}
 	],
 	"education": [
@@ -98,8 +99,7 @@
 			"studyType": "Bachelor",
 			"startDate": "1997-09-01",
 			"endDate": "2002-05-01",
-			"courses": [
-			]
+			"courses": []
 		}
 	],
 	"skills": [

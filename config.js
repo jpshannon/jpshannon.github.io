@@ -8,8 +8,9 @@ const nodeModulesDir = 'node_modules'
 module.exports = {
 	outDir: outDir,
 	srcDir: srcDir,
-	appEntry: path.join(__dirname, srcDir, 'index.js'),
-	vendors: ['bootstrap','jquery', 'popper.js', 'react', 'react-dom'],
+	entry: {
+		app: path.join(__dirname, srcDir, 'index.js')
+	},
 	path: {
 		outDir: path.resolve(__dirname, outDir),
 		srcDir: path.resolve(__dirname, srcDir),
