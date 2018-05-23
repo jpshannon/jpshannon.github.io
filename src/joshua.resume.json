@@ -16,20 +16,26 @@
 		},
 		"profiles": [
 			{
-				"network": "Twitter",
-				"username": "ninjps",
-				"url": "https://twitter.com/ninjps"
-			},
-			{
 				"network": "Github",
 				"username": "jpshannon",
 				"url": "https://github.com/jpshannon"
 			},
 			{
+				"network": "Stack Overflow",
+				"username": "jshannon",
+				"url": "https://stackoverflow.com/story/jshannon"
+			},
+			{
 				"network": "LinkedIn",
 				"url": "https://www.linkedin.com/in/joshuashannon/",
 				"username": "joshuashannon"
+			},
+			{
+				"network": "Twitter",
+				"username": "ninjps",
+				"url": "https://twitter.com/ninjps"
 			}
+
 		]
 	},
 	"work": [
@@ -39,7 +45,7 @@
 			"website": "https://ina.arkansas.gov",
 			"startDate": "2013-05-01",
 			"endDate": "2018-05-01",
-			"summary": "",
+			"summary": "Architect and develop new applications to support the growing portfolio of agencies connecting to citizens. Peer review and mentorship of other developers. Maintain and improve performance of existing applications.",
 			"highlights": [
 				"Development of an API to generate REST APIs from data sources such as CSV files, Web APIs and SQL servers",
 				"Backend development of V1 and V2 of Gov2Go Mobile Application using PHP and REST hosted in AWS",

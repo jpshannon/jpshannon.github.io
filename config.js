@@ -24,6 +24,7 @@ module.exports = {
 			format: 'Letter',
 			filename: 'resume.pdf',
 			pageRanges: '1',
+			emulateMedia: 'screen'
 		}
 	}
 }
