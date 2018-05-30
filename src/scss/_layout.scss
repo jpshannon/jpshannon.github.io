@@ -2,7 +2,7 @@
 // ----------------------------------------------
 // bootstrap: @include media-breakpoint-[down|up|only|between]([xs|sm|md|lg|xl], [xs|sm|md|lg|xl]) { ... }
 
-@include media-breakpoint-up(md) {
+@media (min-width: map-get($grid-breakpoints, md)), print {
   html, body {height: 100%;}
   body {
     background-color: $background-bg;
@@ -13,7 +13,7 @@
 .page {
   background: $page-bg;
 
-  @include media-breakpoint-up(md) {
+  @media (min-width: map-get($grid-breakpoints, md)), print {
     display: flex;
     max-width: $page-width;
     flex-flow: column;
@@ -33,7 +33,8 @@
       }
     }
 
-    @include media-breakpoint-up(md) {
+    @media (min-width: map-get($grid-breakpoints, md)), print {
+
       flex-direction: row;
       .sidebar {
         background-color: $sidebar-bg;
@@ -53,7 +54,7 @@
 
 .basics {
 
-  @include media-breakpoint-up(md) {
+  @media (min-width: map-get($grid-breakpoints, md)), print {
     display: flex;
     flex-flow: row wrap;
     margin: 0;
@@ -73,7 +74,7 @@
     text-align: center;
     padding: $spacer $spacer/2;
 
-    @include media-breakpoint-up(md) {
+    @media (min-width: map-get($grid-breakpoints, md)), print {
       flex: 0 0 $sidebar-width;
       width: $sidebar-width;
       align-items: center;
@@ -91,7 +92,7 @@ article {
     $mh: map-get($scale, 'large');
     margin: $mv $mh;
 
-    @include media-breakpoint-up(md) {
+    @media (min-width: map-get($grid-breakpoints, md)), print {
       margin: $mv $mh $mv * 2;
     }
 
@@ -132,7 +133,7 @@ article {
     padding-left: map-get($scale, 'normal');
   }
 
-  @include media-breakpoint-up(md) {
+  @media (min-width: map-get($grid-breakpoints, md)), print {
     a { color: $sidebar-color; }
     section {
       margin-left: $spacer;
