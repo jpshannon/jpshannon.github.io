@@ -24,7 +24,7 @@ export default function Contact(props) {
 
 	return (
 		<Section article icon="address-book" title="Contact" className="contact">
-			<ul class="contact-info">
+			<ul className="contact-info">
 				{items}
 			</ul>
 		</Section>

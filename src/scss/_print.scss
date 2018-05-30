@@ -8,20 +8,57 @@
   html,
   body {
     align-items: stretch;
+    height: 99.99%;
   }
 
   .page {
     width: auto;
+    max-width: 100%;
     margin: 0;
     box-shadow: none;
   }
 
   .section-summary,
   .section-languages,
-  .card,
   .sidebar .section-skills,
   p {
     page-break-inside: avoid;
+  }
+
+  .dates, .tags dd, .detail h4 {
+    color: $sidebar-bg !important
+  }
+
+  .icon {
+    color: darken($sidebar-bg, 5%) !important;
+  }
+
+  .basics {
+    //border-bottom: map-get($scale, smaller) solid darken($sidebar-bg, 5%);
+
+    & > header {
+      background: white
+    }
+
+    h1 { color: black; }
+    h2 { color: $page-color; }
+
+  }
+
+  .sidebar {
+    background-color: white !important;
+    color: black !important;
+    a {
+      color: black !important;
+    }
+  }
+
+  .sidebar > article,
+  .content > article {
+    & > header {
+      border-bottom: .2em solid $sidebar-secondary;
+      margin-bottom: map-get($scale, smaller);
+    }
   }
 }
 

@@ -69,6 +69,6 @@ module.exports = ({ production, server, coverage, watermark } = {}) => ({
 			resumeConfig: config.resume.options,
 			watermark: watermark ? true : false
 		}),
-		...when(production, new HtmlPdfPlugin(config.resume.options))
+		...when(false, new HtmlPdfPlugin(config.resume.options))
 	],
 })

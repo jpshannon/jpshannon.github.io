@@ -1,77 +1,99 @@
 // Layout
 // ----------------------------------------------
 // bootstrap: @include media-breakpoint-[down|up|only|between]([xs|sm|md|lg|xl], [xs|sm|md|lg|xl]) { ... }
-html, body {height: 99.99%;}
-body {
-  background-color: $background-bg;
-  display: flex;
+
+@include media-breakpoint-up(md) {
+  html, body {height: 100%;}
+  body {
+    background-color: $background-bg;
+    display: flex;
+  }
 }
-
-
 
 .page {
   background: $page-bg;
-  width: $page-width;
-  display: flex;
-  flex-flow: column wrap;
-  margin: auto;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
-  font-size: map-get($scale, small);
 
+  @include media-breakpoint-up(md) {
+    display: flex;
+    max-width: $page-width;
+    flex-flow: column;
+    margin: auto;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+    font-size: map-get($scale, small);
+  }
 
   main {
     flex: 1;
     display: flex;
+    flex-direction: column;
 
     .sidebar {
-      background-color: $sidebar-bg;
-      color: $sidebar-color;
-      flex: 0 0 $sidebar-width;
-      width: $sidebar-width;
+      .contact-info .icon {
+        color: $sidebar-secondary;
+      }
     }
 
-    .content {
-      flex: 1;
-      background-color: $page-bg;
-      color: $page-color;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      .sidebar {
+        background-color: $sidebar-bg;
+        color: $sidebar-color;
+        flex: 0 0 $sidebar-width;
+        width: $sidebar-width;
+      }
+
+      .content {
+        flex: 1;
+        background-color: $page-bg;
+        color: $page-color;
+      }
     }
   }
 }
 
 .basics {
-  display: flex;
-  width: $page-width;
-  display: flex;
-  flex-flow: row wrap;
-  margin: 0;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+
+    .summary {
+      flex: 1;
+      background-color: $page-bg;
+      color: $page-color;
+      margin-bottom: 0;
+    }
+  }
 
   & > header {
     background-color: darken($sidebar-bg, 5%);
     color: $sidebar-color;
-    flex: 0 0 $sidebar-width;
-    width: $sidebar-width;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
     text-transform:uppercase;
     text-align: center;
-    //font-size: map-get($scale, small);
     padding: $spacer $spacer/2;
+
+    @include media-breakpoint-up(md) {
+      flex: 0 0 $sidebar-width;
+      width: $sidebar-width;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
   }
 
-  .summary {
-    flex: 1;
-    background-color: $page-bg;
-    color: $page-color;
-    margin-bottom: 0;
-  }
+
 }
 
 article {
     $mv: map-get($scale, 'large');
     $mh: map-get($scale, 'large');
-    margin: $mv $mh $mv * 2;
+    margin: $mv $mh;
+
+    @include media-breakpoint-up(md) {
+      margin: $mv $mh $mv * 2;
+    }
 
     & > header > h2 {
         $icon-bg-size: map-get($scale, 'large');
@@ -94,25 +116,10 @@ article {
 }
 
 .sidebar {
+
   hr {
     border-color: lighten($sidebar-bg, 10%);
     margin: 0 $spacer 0;
-  }
-
-  a { color: $sidebar-color; }
-
-  section {
-    margin-left: $spacer;
-    margin-right: $spacer;
-  }
-
-  h2 {
-    font-size: map-get($scale, 'large');
-    line-height: map-get($scale, 'large');
-
-    .icon {
-       background-color: transparent;
-    }
   }
 
   .contact-info {
@@ -124,6 +131,23 @@ article {
   .tags {
     padding-left: map-get($scale, 'normal');
   }
+
+  @include media-breakpoint-up(md) {
+    a { color: $sidebar-color; }
+    section {
+      margin-left: $spacer;
+      margin-right: $spacer;
+    }
+    h2 {
+      font-size: map-get($scale, 'large');
+      line-height: map-get($scale, 'large');
+      .icon {
+        background-color: transparent;
+      }
+    }
+
+  }
+
 }
 
 .detail {
