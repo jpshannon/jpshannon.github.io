@@ -22,9 +22,7 @@ module.exports = {
 			url: path.resolve(__dirname, 'index.html'),
 			path: path.resolve(__dirname),
 			format: 'Letter',
-			filename: 'resume.pdf',
-			pageRanges: '1',
-			emulateMedia: 'screen'
+			filename: 'resume.pdf'
 		}
 	}
 }

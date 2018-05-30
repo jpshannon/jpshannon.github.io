@@ -8,11 +8,12 @@
   html,
   body {
     align-items: stretch;
-    height: 99.99;
+    height: 99.99%;
   }
 
   .page {
     width: auto;
+    max-width: 100%;
     margin: 0;
     box-shadow: none;
   }
@@ -24,12 +25,16 @@
     page-break-inside: avoid;
   }
 
+  .dates, .tags dd, .detail h4 {
+    color: $sidebar-bg !important
+  }
+
   .icon {
     color: darken($sidebar-bg, 5%) !important;
   }
 
   .basics {
-    border-bottom: map-get($scale, smaller) solid darken($sidebar-bg, 5%);
+    //border-bottom: map-get($scale, smaller) solid darken($sidebar-bg, 5%);
 
     & > header {
       background: white
